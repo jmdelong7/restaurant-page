@@ -1,9 +1,4 @@
-import createContent from "./home.js"
-import logo from "./images/logo.png"
-
-createContent(
-  "content", "logo-container", logo, "logo", "logo"
-)
+import assembleHomePage from "./home.js"
 
 function switchTab(contentId, tab) {
   const content = document.getElementById(contentId)
@@ -17,3 +12,12 @@ function tabListeners(buttonId, contentId, tab) {
     switchTab(contentId, tab)
   })
 }
+
+function addButtonListener(buttonId, page) {
+  const button = document.getElementById(buttonId)
+  button.addEventListener("click", () => {
+    page()
+  })
+}
+
+addButtonListener("home-button", () => assembleHomePage("content"))
