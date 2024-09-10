@@ -13,11 +13,13 @@ function tabListeners(buttonId, contentId, tab) {
   })
 }
 
-function addButtonListener(buttonId, page) {
+function addButtonListener(mainId, buttonId, page) {
+  const main = document.getElementById(mainId)
   const button = document.getElementById(buttonId)
   button.addEventListener("click", () => {
+    main.innerHTML = ''
     page()
   })
 }
 
-addButtonListener("home-button", () => assembleHomePage("content"))
+addButtonListener("content", "home-button", () => assembleHomePage("content"))

@@ -60,10 +60,15 @@ class HomePage{
 export default function assembleHomePage(contentId) {
   const homePage = new HomePage(contentId)
   const homePageElements = homePage.createInnerHtml()
-  homePage.content.append(
+
+  const homeDiv = document.createElement("div")
+  homeDiv.className = "home"
+  
+  homeDiv.append(
     homePageElements.logoContainer,
     homePageElements.headlineContainer,
     homePageElements.hoursContainer,
     homePageElements.contactContainer
   )
+  homePage.content.appendChild(homeDiv)
 }
