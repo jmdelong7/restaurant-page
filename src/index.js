@@ -1,19 +1,6 @@
 import assembleHomePage from "./home.js"
 
-function switchTab(contentId, tab) {
-  const content = document.getElementById(contentId)
-  content.innerHTML = ''
-  tab()
-}
-
-function tabListeners(buttonId, contentId, tab) {
-  const button = document.getElementById(buttonId)
-  button.addEventListener("click", () => {
-    switchTab(contentId, tab)
-  })
-}
-
-function addButtonListener(mainId, buttonId, page) {
+function navButtonListener(mainId, buttonId, page) {
   const main = document.getElementById(mainId)
   const button = document.getElementById(buttonId)
   button.addEventListener("click", () => {
@@ -22,4 +9,4 @@ function addButtonListener(mainId, buttonId, page) {
   })
 }
 
-addButtonListener("content", "home-button", () => assembleHomePage("content"))
+navButtonListener("content", "home-button", () => assembleHomePage("content"))
