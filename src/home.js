@@ -25,7 +25,7 @@ class HomePage extends Page{
       "Closed: Thanksgiving Day, Christmas Eve, and Chistmas Day",
       "Open: New Year's Eve and New Year's Day"
     ]
-    super.appendToFirstChild(hoursContainer, hoursText, "p")
+    super.appendArrayToFirstChild(hoursContainer, hoursText, "p")
 
     const contactContainer = super.createSection("contact")
     const contactText = [
@@ -34,7 +34,7 @@ class HomePage extends Page{
       "2621 5th Ave, Seattle, WA 98121",
       "No Reservations."
     ]
-    super.appendToFirstChild(contactContainer, contactText, "p")
+    super.appendArrayToFirstChild(contactContainer, contactText, "p")
 
     return {logoContainer, headlineContainer, hoursContainer, contactContainer}
   }

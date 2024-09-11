@@ -16,11 +16,11 @@ export default class Page {
     parent.firstElementChild.appendChild(elementToAppend)
   }
 
-  appendArrayToSection(outer, array, elementType) {
+  appendArrayToFirstChild(parent, array, elementType) {
     array.forEach((e) => {
       const element = document.createElement(elementType)
       element.textContent = e
-      this.appendArrayToSection(outer, e)
+      this.appendToFirstChild(parent, element)
     })
   }
 
