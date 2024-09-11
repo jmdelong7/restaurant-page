@@ -1,4 +1,5 @@
 import assembleHomePage from "./home.js"
+import assembleMenuPage from "./menu.js"
 
 function navButtonListener(mainId, buttonId, page) {
   const main = document.getElementById(mainId)
@@ -10,3 +11,4 @@ function navButtonListener(mainId, buttonId, page) {
 }
 
 navButtonListener("content", "home-button", () => assembleHomePage("content"))
+navButtonListener("content", "menu-button", () => assembleMenuPage("content"))
