@@ -133,3 +133,7 @@ p, li {
 .menu-1-container-outer {
   margin-top: 10px;
 }
+
+button {
+  cursor: pointer
+}
