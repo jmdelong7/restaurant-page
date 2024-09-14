@@ -9,6 +9,7 @@ class HomePage extends Page{
   createInnerHtml() {
     const logoContainer = super.createSection("logo")
     const logo = document.createElement("img")
+    logo.id = "logo"
     logo.src = logoSrc
     logo.alt = "Pho Viet Anh Logo"
     super.appendToFirstChild(logoContainer, logo)
@@ -20,7 +21,7 @@ class HomePage extends Page{
 
     const hoursContainer = super.createSection("hours")
     const hoursText = [
-      "Open everyday except Tuesday, 11am-8pm",
+      "We are open everyday except Tuesday, 11am-8pm",
       "Last seating: 7:30pm",
       "Closed: Thanksgiving Day, Christmas Eve, and Chistmas Day",
       "Open: New Year's Eve and New Year's Day"
