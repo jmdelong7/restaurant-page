@@ -11,5 +11,8 @@ function navButtonListener(mainId, buttonId, page) {
   })
 }
 
+assembleHomePage("content")
+
 navButtonListener("content", "home-button", () => assembleHomePage("content"))
 navButtonListener("content", "menu-button", () => assembleMenuPage("content"))
+

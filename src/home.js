@@ -21,19 +21,27 @@ class HomePage extends Page{
 
     const hoursContainer = super.createSection("hours")
     const hoursText = [
-      "We are open everyday except Tuesday, 11am-8pm",
-      "Last seating: 7:30pm",
-      "Closed: Thanksgiving Day, Christmas Eve, and Chistmas Day",
-      "Open: New Year's Eve and New Year's Day"
+      "Monday:    11am-8pm",
+      "Tuesday:   CLOSED",
+      "Wednesday: 11am-8pm",
+      "Thursday:  11am-8pm",
+      "Friday:    11am-8pm",
+      "Saturday:  11am-8pm",
+      "Sunday:    11am-8pm",
+      "(Last seating, 7:30pm)",
+      "No Reservations."
     ]
-    super.appendArrayToFirstChild(hoursContainer, hoursText, "p")
+    const hoursList = document.createElement("ul")
+    hoursList.className = "hours-list"
+    super.appendToFirstChild(hoursContainer, hoursList)
+    const hoursInner = hoursContainer.firstElementChild
+    super.appendArrayToFirstChild(hoursInner, hoursText, "li")
 
     const contactContainer = super.createSection("contact")
     const contactText = [
       "Pho Viet Anh",
       "206-352-1881",
       "2621 5th Ave, Seattle, WA 98121",
-      "No Reservations."
     ]
     super.appendArrayToFirstChild(contactContainer, contactText, "p")
 
