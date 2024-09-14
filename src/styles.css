@@ -1,0 +1,91 @@
+/* https://mattbrictson.com/blog/css-normalize-and-reset#my-recommendation */
+
+/* :root font added: 
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  https://css-tricks.com/snippets/css/system-font-stack/
+ */
+
+/* Personal changes
+    :root - box-sizing: border-box;
+    input - appearance: none;
+    body - margin: 0;
+*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+}
+
+:root {
+  line-height: 1.5;
+  --system-ui: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+  padding-inline: 0;
+}
+
+h1, h2, h3, h4, h5 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+/* New styles below */
+html {
+  font-family: sans-serif;
+}
+
+nav {
+  display: block;
+  text-align: center;
+  margin: 10px;
+}
+
+nav button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  margin: 0 5px;
+  background-color: rgba(255, 132, 0, 0.495);
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home, .menu, .about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+}
+
+p {
+  font-size: 2rem;
+}
+
+.outer {
+  border: 2px solid blue;
+}
+
+.inner {
+  border: 2px solid red;
+}

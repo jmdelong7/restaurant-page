@@ -1,3 +1,4 @@
+import "./styles.css"
 import assembleHomePage from "./home.js"
 import assembleMenuPage from "./menu.js"
 
